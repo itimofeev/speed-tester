@@ -29,8 +29,16 @@ func main() {
 ```
 
 ## About tests
-Test coverage can be seen by running unit tests with coverage:
-`make cover`
+Test coverage can be seen by running unit tests with coverage (you need to have installed make):
+`make coverage`
+
+```shell
+➜  speed-tester git:(main) ✗ make coverage                
+go test ./... -coverprofile cover.out > /dev/null
+go tool cover -func cover.out | grep total | awk '{print }'
+total:                                                                          (statements)    82.3%
+rm cover.out
+```
 
 In author's opinion it's no so good idea to write unit tests that depends on network, because it can cause of annoying flaky tests.
 
