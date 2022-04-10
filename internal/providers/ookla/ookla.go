@@ -8,6 +8,7 @@ import (
 	"github.com/showwin/speedtest-go/speedtest"
 )
 
+// Provider that runs speed test using speedtest.com by OOKLA
 type Provider struct {
 	onlyClosest bool
 }

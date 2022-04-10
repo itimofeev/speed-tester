@@ -9,6 +9,7 @@ import (
 	"github.com/itimofeev/speed-tester/internal/providers/ookla"
 )
 
+// speedTester internal struct with providerMap field needed to write unit tests on RunSpeedTest method
 type speedTester struct {
 	providerMap map[ProviderName]Provider
 }

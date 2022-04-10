@@ -8,6 +8,7 @@ import (
 	"gopkg.in/ddo/go-fast.v0"
 )
 
+// Provider that runs speed test using fast.com
 type Provider struct {
 }
 
