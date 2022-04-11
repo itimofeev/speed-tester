@@ -14,6 +14,9 @@ type speedTester struct {
 	providerMap map[ProviderName]Provider
 }
 
+// RunSpeedTest exposed from library API method for running one of two test speed providers
+// ookla's speedtest.com or netflix's fast.com
+// see main.go for examples of using this method
 func RunSpeedTest(ctx context.Context, providerName ProviderName) (*Speed, error) {
 	return defaultSpeedTester.RunSpeedTest(ctx, providerName)
 }
